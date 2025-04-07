@@ -1,0 +1,29 @@
+{
+    "name": "pralhadstha/omnipay-khalti",
+    "description": "Khalti Omnipay Package for PHP applications",
+    "type": "library",
+    "require": {
+        "omnipay/common": "^3.4",
+        "omnipay/tests": "dev-master",
+        "symfony/http-client": "^7.2",
+        "http-interop/http-factory-guzzle": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Omnipay\\Khalti\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pralhad Kumar Shrestha",
+            "email": "pralhad.shrestha05@gmail.com"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
