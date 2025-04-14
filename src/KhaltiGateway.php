@@ -8,7 +8,6 @@ use Omnipay\Khalti\Message\VerifyPaymentRequest;
 
 class KhaltiGateway extends AbstractGateway
 {
-
     public function getName()
     {
         return 'Khalti';

@@ -5,7 +5,7 @@ namespace Omnipay\Khalti\Message;
 use Omnipay\Common\Exception\InvalidRequestException;
 use Omnipay\Common\Message\AbstractRequest;
 
-abstract class  BaseAbstractRequest extends AbstractRequest
+abstract class BaseAbstractRequest extends AbstractRequest
 {
     protected $liveEndpoint = 'https://khalti.com/api/v2/';
     protected $testEndpoint = 'https://dev.khalti.com/api/v2/';
