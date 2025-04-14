@@ -11,10 +11,10 @@ This package implements Khalti support for Omnipay.
 
 Omnipay is installed via [Composer](http://getcomposer.org/).
 
-To install, simply require `pralhadstha/omnipay-khalti` with Composer:
+To install, simply require `league/omnipay` and `pralhadstha/omnipay-khalti` with Composer:
 
 ```
-composer require pralhadstha/omnipay-khalti
+composer require league/omnipay pralhadstha/omnipay-khalti
 ```
 
 ## Basic Usage
@@ -27,7 +27,7 @@ composer require pralhadstha/omnipay-khalti
 
     $gateway = Omnipay::create('Khalti_Khalti');
 
-    $gateway->setSecretKey('secret_key_provided_by_khalti');
+    $gateway->setSecret('secret_key_provided_by_khalti');
     $gateway->setTestMode(true);
 
     try {
@@ -54,10 +54,10 @@ After successful payment and redirect back to merchant site, you can verify the 
 ```php
     $gateway = Omnipay::create('Khalti_Khalti');
 
-    $gateway->setSecretKey('secret_key_provided_by_khalti');
+    $gateway->setSecret('secret_key_provided_by_khalti');
     $gateway->setTestMode(true);
 
-    $payload = json_decode($_GET['data'], true);
+    $payload = $_GET;
 
     try {
         $response = $gateway->fetchTransaction([
