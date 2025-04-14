@@ -24,9 +24,7 @@ class VerifyPaymentRequest extends BaseAbstractRequest
 
         $response = $this->httpClient->request('POST', $this->getEndpoint(), $headers, json_encode($data));
 
-        $responseBody = $response->getBody()->getContents();
-
-        return $this->response = new VerifyPaymentResponse($this, json_decode($responseBody, true));
+        return $this->response = new VerifyPaymentResponse($this, $this->handleResponse($response));
     }
 
     /**
